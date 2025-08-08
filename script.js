@@ -770,12 +770,12 @@ function updateChestUI_Modal() {
     chestCooldownModal.textContent = '';
     openChestBtnModal.disabled = false;
     chestImgModal.style.cursor = 'pointer';
-    chestImgModal.src = '/assets/closedChest.png';
+    chestImgModal.src = '/CTBB/assets/closedChest.png';
   } else {
     chestCooldownModal.textContent = `Cooldown: ${remaining}s`;
     openChestBtnModal.disabled = true;
     chestImgModal.style.cursor = 'not-allowed';
-    chestImgModal.src = '/assets/closedChest.png';
+    chestImgModal.src = '/CTBB/assets/closedChest.png';
   }
 }
 
@@ -787,11 +787,11 @@ function openChest_Modal() {
   chestImgModal.classList.add('opening');
   openChestBtnModal.disabled = true;
   chestImgModal.style.cursor = 'not-allowed';
-  chestImgModal.src = '/assets/openedChest.png';
+  chestImgModal.src = '/CTBB/assets/openedChest.png';
 
   setTimeout(() => {
     chestImgModal.classList.remove('opening');
-    chestImgModal.src = '/assets/closedChest.png';
+    chestImgModal.src = '/CTBB/assets/closedChest.png';
 
     const roll = Math.random() * 100;
 
@@ -867,3 +867,4 @@ function getCooldownRemaining() {
 }
 
 });
+
